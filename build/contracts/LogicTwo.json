@@ -1,0 +1,659 @@
+{
+  "contractName": "LogicTwo",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "val",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_val",
+          "type": "uint256"
+        }
+      ],
+      "name": "setVal",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_val\",\"type\":\"uint256\"}],\"name\":\"setVal\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"val\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicTwo.sol\":\"LogicTwo\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicOne.sol\":{\"keccak256\":\"0xa13de6e482d127f4f9f3c502ec068f973fb212a7eb22b77afd5d6cf99239ed4f\",\"urls\":[\"bzz-raw://7ff14bdd88db65f459bb5737493e83a382971a3a0bc785dac4dce19ce48083b8\",\"dweb:/ipfs/QmX2ExWyMkzceuY5Sgnzv9WPn7Djvt6J4KVxLTU591Thv4\"]},\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicTwo.sol\":{\"keccak256\":\"0x1fb04d4f2e5259ef946a4ad646a2b079aa6afa5509938d3ae07e56a7d9f0a626\",\"urls\":[\"bzz-raw://b10f2c69dfaeba1e23f4a9eb2e1d47495ae29e362e3c2ffa7a21d64feb505312\",\"dweb:/ipfs/QmREECDE9Jv7PBgepoUxqzJkCfWwHkkDd884PdBhEByxR1\"]},\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol\":{\"keccak256\":\"0x055807e00a8f4d286f79500d67ba697c7717f4afd71ef084681ef33aa486e9f6\",\"urls\":[\"bzz-raw://38f47ec710b4e76857785cbf6e08e71a1ba9d31e54e40f17aa5f01c8536055d3\",\"dweb:/ipfs/QmPfC3mE83R6SWbKt8emsHZmvPwywhxoo7dVhRNeK7HvNA\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060e68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80633c6bb4361460375780633d4197f0146053575b600080fd5b603d6096565b6040518082815260200191505060405180910390f35b607c60048036036020811015606757600080fd5b8101908080359060200190929190505050609c565b604051808215151515815260200191505060405180910390f35b60005481565b6000816003026000819055506001905091905056fea265627a7a72315820d033e6a90b990ed186cbcafb628bf67befa3c9ec0248d0c031249d1349a896c564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80633c6bb4361460375780633d4197f0146053575b600080fd5b603d6096565b6040518082815260200191505060405180910390f35b607c60048036036020811015606757600080fd5b8101908080359060200190929190505050609c565b604051808215151515815260200191505060405180910390f35b60005481565b6000816003026000819055506001905091905056fea265627a7a72315820d033e6a90b990ed186cbcafb628bf67befa3c9ec0248d0c031249d1349a896c564736f6c63430005100032",
+  "sourceMap": "52:147:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:147:1;;;;;;;",
+  "deployedSourceMap": "52:147:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:147:1;;;;;;;;;;;;;;;;;;;;;;;;49:15:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;88:109:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;88:109:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;49:15:2;;;;:::o;88:109:1:-;131:12;165:4;161:1;:8;155:3;:14;;;;186:4;179:11;;88:109;;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\nimport './LogicOne.sol';\n\ncontract LogicTwo is LogicOne {\n    function setVal(uint _val) public returns (bool success) {\n        val = 3 * _val;\n        return true;\n    }\n}\n",
+  "sourcePath": "C:/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicTwo.sol",
+  "ast": {
+    "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicTwo.sol",
+    "exportedSymbols": {
+      "LogicTwo": [
+        43
+      ]
+    },
+    "id": 44,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicOne.sol",
+        "file": "./LogicOne.sol",
+        "id": 24,
+        "nodeType": "ImportDirective",
+        "scope": 44,
+        "sourceUnit": 22,
+        "src": "26:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 25,
+              "name": "LogicOne",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 21,
+              "src": "73:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LogicOne_$21",
+                "typeString": "contract LogicOne"
+              }
+            },
+            "id": 26,
+            "nodeType": "InheritanceSpecifier",
+            "src": "73:8:1"
+          }
+        ],
+        "contractDependencies": [
+          21,
+          48
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 43,
+        "linearizedBaseContracts": [
+          43,
+          21,
+          48
+        ],
+        "name": "LogicTwo",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 41,
+              "nodeType": "Block",
+              "src": "145:52:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 33,
+                      "name": "val",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47,
+                      "src": "155:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 36,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "33",
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "161:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_3_by_1",
+                          "typeString": "int_const 3"
+                        },
+                        "value": "3"
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "*",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "_val",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28,
+                        "src": "165:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "161:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "155:14:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 38,
+                  "nodeType": "ExpressionStatement",
+                  "src": "155:14:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 39,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "186:4:1",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 32,
+                  "id": 40,
+                  "nodeType": "Return",
+                  "src": "179:11:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 42,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setVal",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "name": "_val",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42,
+                  "src": "104:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:11:1"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42,
+                  "src": "131:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 30,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "131:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:14:1"
+            },
+            "scope": 43,
+            "src": "88:109:1",
+            "stateMutability": "nonpayable",
+            "superFunction": 20,
+            "visibility": "public"
+          }
+        ],
+        "scope": 44,
+        "src": "52:147:1"
+      }
+    ],
+    "src": "0:200:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicTwo.sol",
+      "exportedSymbols": {
+        "LogicTwo": [
+          43
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 23,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 22,
+          "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/LogicOne.sol",
+          "file": "./LogicOne.sol",
+          "scope": 44,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 24,
+        "name": "ImportDirective",
+        "src": "26:24:1"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            21,
+            48
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            43,
+            21,
+            48
+          ],
+          "name": "LogicTwo",
+          "scope": 44
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "LogicOne",
+                  "referencedDeclaration": 21,
+                  "type": "contract LogicOne"
+                },
+                "id": 25,
+                "name": "UserDefinedTypeName",
+                "src": "73:8:1"
+              }
+            ],
+            "id": 26,
+            "name": "InheritanceSpecifier",
+            "src": "73:8:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setVal",
+              "scope": 43,
+              "stateMutability": "nonpayable",
+              "superFunction": 20,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_val",
+                      "scope": 42,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 27,
+                        "name": "ElementaryTypeName",
+                        "src": "104:4:1"
+                      }
+                    ],
+                    "id": 28,
+                    "name": "VariableDeclaration",
+                    "src": "104:9:1"
+                  }
+                ],
+                "id": 29,
+                "name": "ParameterList",
+                "src": "103:11:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "success",
+                      "scope": 42,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 30,
+                        "name": "ElementaryTypeName",
+                        "src": "131:4:1"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclaration",
+                    "src": "131:12:1"
+                  }
+                ],
+                "id": 32,
+                "name": "ParameterList",
+                "src": "130:14:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 47,
+                              "type": "uint256",
+                              "value": "val"
+                            },
+                            "id": 33,
+                            "name": "Identifier",
+                            "src": "155:3:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "*",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "33",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 3",
+                                  "value": "3"
+                                },
+                                "id": 34,
+                                "name": "Literal",
+                                "src": "161:1:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 28,
+                                  "type": "uint256",
+                                  "value": "_val"
+                                },
+                                "id": 35,
+                                "name": "Identifier",
+                                "src": "165:4:1"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "BinaryOperation",
+                            "src": "161:8:1"
+                          }
+                        ],
+                        "id": 37,
+                        "name": "Assignment",
+                        "src": "155:14:1"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "ExpressionStatement",
+                    "src": "155:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 32
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 39,
+                        "name": "Literal",
+                        "src": "186:4:1"
+                      }
+                    ],
+                    "id": 40,
+                    "name": "Return",
+                    "src": "179:11:1"
+                  }
+                ],
+                "id": 41,
+                "name": "Block",
+                "src": "145:52:1"
+              }
+            ],
+            "id": 42,
+            "name": "FunctionDefinition",
+            "src": "88:109:1"
+          }
+        ],
+        "id": 43,
+        "name": "ContractDefinition",
+        "src": "52:147:1"
+      }
+    ],
+    "id": 44,
+    "name": "SourceUnit",
+    "src": "0:200:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0xfd7cda96d86c83c17edd0d55727ba3abd0de93f9",
+      "transactionHash": "0xb25b22f41b28a527ca8fde3fef8fc2c7ae4cea50a3470f6e4ff50e4a508ef5e5"
+    },
+    "1615905127781": {
+      "events": {},
+      "links": {},
+      "address": "0xfd6a3791Ee4C5eFeedbF27A38589Fbb528289c5f",
+      "transactionHash": "0x7e35c8cda46ce64c1d6a9b3bfb9a4b5db9013c4f9759117e07edcac43520afb2"
+    },
+    "1615906353836": {
+      "events": {},
+      "links": {},
+      "address": "0xfd6a3791Ee4C5eFeedbF27A38589Fbb528289c5f",
+      "transactionHash": "0x7e35c8cda46ce64c1d6a9b3bfb9a4b5db9013c4f9759117e07edcac43520afb2"
+    },
+    "1615943967112": {
+      "events": {},
+      "links": {},
+      "address": "0xfd6a3791Ee4C5eFeedbF27A38589Fbb528289c5f",
+      "transactionHash": "0x5cd1f0bf894db8aba36bdb64c506ed23fa13438d76392c8f8bfbbc8c5111a78d"
+    },
+    "1615946764300": {
+      "events": {},
+      "links": {},
+      "address": "0xfd6a3791Ee4C5eFeedbF27A38589Fbb528289c5f",
+      "transactionHash": "0x52e811aac29e69cf914e56eb4c5e678eda33360f2778230de0fd083fadb04c8f"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-17T02:06:30.776Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

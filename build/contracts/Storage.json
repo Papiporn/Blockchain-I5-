@@ -1,0 +1,184 @@
+{
+  "contractName": "Storage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "val",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"val\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol\":\"Storage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol\":{\"keccak256\":\"0x055807e00a8f4d286f79500d67ba697c7717f4afd71ef084681ef33aa486e9f6\",\"urls\":[\"bzz-raw://38f47ec710b4e76857785cbf6e08e71a1ba9d31e54e40f17aa5f01c8536055d3\",\"dweb:/ipfs/QmPfC3mE83R6SWbKt8emsHZmvPwywhxoo7dVhRNeK7HvNA\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060848061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633c6bb43614602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820bd52466ae7f62d56ba3b44df7fd96bc78c5d62566e12d711452ebb108d85107264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633c6bb43614602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a72315820bd52466ae7f62d56ba3b44df7fd96bc78c5d62566e12d711452ebb108d85107264736f6c63430005100032",
+  "sourceMap": "26:41:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:41:0;;;;;;;",
+  "deployedSourceMap": "26:41:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:41:0;;;;;;;;;;;;;;;;;;;49:15;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\ncontract Storage {\n    uint public val;\n}\n",
+  "sourcePath": "C:/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol",
+  "ast": {
+    "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol",
+    "exportedSymbols": {
+      "Storage": [
+        4
+      ]
+    },
+    "id": 5,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4,
+        "linearizedBaseContracts": [
+          4
+        ],
+        "name": "Storage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "val",
+            "nodeType": "VariableDeclaration",
+            "scope": 4,
+            "src": "49:15:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "49:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5,
+        "src": "26:41:0"
+      }
+    ],
+    "src": "0:68:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/richa/Desktop/Blockchain Intermediate/2-3-21/Upgradable-Proxy-Smart-Contract-master/contracts/Storage.sol",
+      "exportedSymbols": {
+        "Storage": [
+          4
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4
+          ],
+          "name": "Storage",
+          "scope": 5
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "val",
+              "scope": 4,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "49:4:0"
+              }
+            ],
+            "id": 3,
+            "name": "VariableDeclaration",
+            "src": "49:15:0"
+          }
+        ],
+        "id": 4,
+        "name": "ContractDefinition",
+        "src": "26:41:0"
+      }
+    ],
+    "id": 5,
+    "name": "SourceUnit",
+    "src": "0:68:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-16T14:32:18.070Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
